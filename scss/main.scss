@@ -1,14 +1,15 @@
-@import "config";
-@import "utilities";
+@import 'config';
+@import 'utilities';
+@import 'item_grid';
 
-// general styles
+// General Styles
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Dosis", sans-serif;
+  font-family: 'Dosis', sans-serif;
   line-height: 1.6;
   background: #fff;
 }
@@ -40,7 +41,7 @@ img {
   text-transform: uppercase;
 }
 
-// Main nav
+// Main Nav
 #main-nav {
   display: flex;
   justify-content: space-between;
@@ -91,6 +92,7 @@ img {
       }
     }
   }
+
   // Header Inner
   &-inner {
     background: $bg-image no-repeat 20% 30% / cover;
@@ -141,6 +143,7 @@ img {
         &:nth-child(odd) {
           background: $light-color;
         }
+
         &:nth-child(even) {
           background: $medium-color;
         }
@@ -148,8 +151,7 @@ img {
     }
   }
 
-  // Home section C
-
+  // Home Section C
   &-c {
     .process {
       display: grid;
@@ -173,7 +175,7 @@ img {
         transition: all 1s;
       }
 
-      // proces-icon
+      // process-icon
       &-icon {
         border-radius: 50%;
         background: $dark-color;
@@ -202,18 +204,19 @@ img {
   }
 }
 
-// About sections
+// About Sections
 #about {
   // About A
   &-a {
     .about-info {
       display: grid;
       grid-template-areas:
-        "bioimage bio bio"
-        "aw1 aw2 aw3";
+        'bioimage bio bio'
+        'aw1 aw2 aw3';
       grid-gap: 1.2rem;
     }
 
+    // Grid Area
     .bio-image {
       grid-area: bioimage;
     }
@@ -227,9 +230,11 @@ img {
     .award-1 {
       grid-area: aw1;
     }
+
     .award-2 {
       grid-area: aw2;
     }
+
     .award-3 {
       grid-area: aw3;
     }
@@ -241,7 +246,6 @@ img {
       margin: 1rem;
     }
   }
-
   // About B
   &-b {
     .progress {
@@ -249,7 +253,7 @@ img {
       height: 20px;
       background: $medium-color;
       border-radius: 5px;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.6rem;
 
       div {
         height: 100%;
@@ -259,7 +263,7 @@ img {
       }
     }
   }
-
+  // About C
   &-c {
     .about-logos {
       display: grid;
@@ -271,7 +275,7 @@ img {
       }
     }
   }
-
+  // About D
   &-d {
     .testimonials {
       display: grid;
@@ -301,19 +305,19 @@ img {
   }
 }
 
-// Contact page
+// Contact Page
 #contact {
   &-a {
     .text-fields {
       display: grid;
       grid-template-areas:
-        "name email"
-        "subject phone"
-        "message message";
+        'name email'
+        'subject phone'
+        'message message';
       grid-gap: 1.2rem;
       margin-bottom: 1.2rem;
 
-      // Grid areas
+      // Grid Areas
       .name-input {
         grid-area: name;
       }
@@ -336,7 +340,7 @@ img {
       }
     }
 
-    button[type="submit"] {
+    button[type='submit'] {
       width: 50%;
     }
   }
@@ -385,3 +389,6 @@ img {
     }
   }
 }
+
+// Import Media Queries
+@import 'media';

@@ -1,7 +1,7 @@
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0, 3);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .item {
@@ -10,7 +10,7 @@
   overflow: hidden;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     background: inherit;
@@ -24,7 +24,7 @@
   }
 
   // Bring in main color overlay
-  &:hover::after {
+  &:hover:after {
     transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
   }
 
@@ -47,7 +47,7 @@
   }
 
   &-image:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 75%;
     overflow: hidden;

@@ -18,23 +18,25 @@
   &-main {
     @extend %btn-shared;
     color: #333;
-    background: $main-color;
+    background-color: $main-color;
   }
+
   &-light {
     @extend %btn-shared;
     color: #333;
-    background: $light-color;
+    background-color: $light-color;
   }
+
   &-dark {
     @extend %btn-shared;
     color: #f4f4f4;
-    background: $dark-color;
+    background-color: $dark-color;
   }
 }
 
-button[class^="btn-"]:hover,
-a[class^="btn-"]:hover,
-input[class^="btn-"]:hover {
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
   background-color: $main-color;
 }
 
